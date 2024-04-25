@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         body{
+
+             background-image: url('{{ url_for('static', filename='1.jpeg') }}');
+            background-repeat: no-repeat;
+             background-size: cover;
+              background-color: lightgray; 
+              opacity:0.8;
+              
+        }
+        .container{
+            margin-top: 150px;
+            opacity: 0.8;
+        }
+        .btton{
+            text-align: center;
+            margin-top: 10px;
+        }
+        .card-body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sentiment Analysis Result</h5>
+                        <hr>
+                        <p class="card-text">{{ result }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btton">
+
+            <a href="/"><button type="button"  class="btn btn-outline-danger">Back</button></a>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+</body>
+</html>

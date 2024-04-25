@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <!-- Bootstrap CSS -->
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Add custom styles here */
+        /* Example: */
+        
+       @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lugrasimo&family=Playpen+Sans:wght@100&family=Poppins:wght@100&family=Sedan:ital@0;1&display=swap');        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lugrasimo&family=Playpen+Sans:wght@100&family=Poppins:wght@100&display=swap');
+        body{
+
+             background-image: url('{{ url_for('static', filename='sss.jpg') }}');
+            background-repeat: no-repeat;
+             background-size: cover;
+              background-color: lightgray; 
+              
+        }
+        .container {
+            margin-top: 50px;
+            
+        }
+        .form-control{
+            
+            border-radius: 8px ;
+            width: 800px;
+            margin-left: 150px;
+ opacity: 0.5;
+        }
+        #textcss{
+            font-size: 40px;
+            font-weight: 600;
+              font-family: "Sedan", serif;
+            color: #e08181;
+            margin-left: 150px;
+    }
+    .display-4{
+        color: #DC6B19;
+        text-align: center;
+         font-family: "Sedan", serif;
+        font-size: 70px;
+        font-weight: 600;
+    }
+    .textct{
+        
+        text-align: center;
+
+    }
+     .footer-paragraph {
+            position: absolute; /* Position relative to the container */
+            bottom: 20px; /* Distance from the bottom */
+            text-align: center; /* Center text */
+            width: 100%; /* Full width */
+            color: #e34c4c; /* Text color */
+            
+        }
+    </style>
+</head>
+<body  >
+    <!-- <img src="{{url_for('static',filename='ss.jpg')}}" alt="flag" height="400" width="400"> -->
+    <div class="container">
+        <h1 class="display-4">Sentiment Analyzer</h1>
+        <form action="/analyze" method="POST">
+            <div class="form-group">
+                <label id="textcss" for="textInput">Add Your Sentiment</label>
+                <textarea class="form-control" id="textInput" name="text" rows="5" cols="3"></textarea>
+            </div>
+            <div class="textct">
+
+                <button type="submit"  class="btn  btn-outline-danger">Analyze Sentiment</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <p class="footer-paragraph"> All rights are reserved!😅</p>
+    </div>
+    
+    
+    
+
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+</body>
+</html>
+
